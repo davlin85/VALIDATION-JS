@@ -8,5 +8,5 @@ let firstName = "David"
 let lastName = 'Lindstrom'
 
 var sentence = "Hej jag heter " + firstName + " " + lastName + "."
-console.log(sentence);
+console.log(sentence)
 
