@@ -50,3 +50,9 @@ console.log(json)
 
 /*console.log(json_user)*/
 
+var x = x + 5;
+var y = 6;
+
+z = x + y;
+
+console.log()
