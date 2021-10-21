@@ -23,51 +23,40 @@
             <div class="col-md-4 offset-md-4 mb-5">
                 <h1>Sign Up!</h1>
             </div>
-            <form id="myForm">
+            <form id="myForm" onsubmit="onSubmit(event)" novalidate>
             <div class="col-md-4 offset-md-4 mb-3 form-floating">
-                <input type="text" class="form-control" id="firstName" placeholder="FirstName">
-                <label id="labelFirstName" for="floating">First Name:</label>
-                <div class="mt-3">
-                    <span class="text-danger"></span>
-                </div>
+                <input id="contactForm-firstName" required type="text" class="form-control needs-validation" placeholder="firstName">
+                <label for="contactForm-firstName">First Name:</label>
+                <span id="contactForm-firstName-error" class="invalid-feedback text-danger"><small>First Name must be at least 2 characters</small></span>
             </div>
 
             <div class="col-md-4 offset-md-4 mb-3 form-floating">
-                <input type="text" class="form-control" id="lastName" placeholder="lastName">
-                <label id="labelLastName" for="floating">Last Name:</label>
-                <div class="mt-3">
-                    <span class="text-danger"></span>
-                </div>
+                <input id="contactForm-lastName" required type="text" class="form-control needs-validation" placeholder="lastName">
+                <label for="contactForm-lastName">Last Name:</label>
+                <span id="contactForm-lastName-error" class="invalid-feedback text-danger"><small>Last Name must be at least 2 characters</small></span>
             </div>
 
             <div class="col-md-4 offset-md-4 mb-3 form-floating">
-                <input type="password" class="form-control" id="password" placeholder="password">
-                <label id="labelPassword" for="floating">Password:</label>
-                <div class="mt-3">
-                    <span class="text-danger"></span>
-                </div>
+                <input id="contactForm-password" required type="password" class="form-control needs-validation" placeholder="password">
+                <label for="contactForm-password">Password:</label>
+                <span id="contactForm-password-error" class="invalid-feedback text-danger"><small>Password must be 7 to 15 characters</small></span>
             </div>
 
             <div class="col-md-4 offset-md-4 mb-3 form-floating">
-                <input type="password" class="form-control" id="confirmPassword" placeholder="confirmPassword">
-                <label id="labelConfirmPassword" for="floating">Confirm Password:</label>
-                <div class="mt-3">
-                    <span class="text-danger"></span>
-                </div>
+                <input id="contactForm-confirmPassword" required type="password" class="form-control needs-validation" placeholder="confirmPassword">
+                <label for="contactForm-confirmPassword">Confirm Password:</label>
+                <span id="contactForm-confirmPassword-error" class="invalid-feedback text-danger"><small>Password must be 7 to 15 characters</small></span>
             </div>
 
             <div class="col-md-4 offset-md-4 mb-3 form-floating">
-                <input type="email" class="form-control" id="email" placeholder="email">
-                <label id="labelEmail" for="floating">Email:</label>
-                <div class="mt-3">
-                    <span class="text-danger"></span>
-                </div>
+                <input id="contactForm-email" required type="email" class="form-control needs-validation" placeholder="email">
+                <label for="contactForm-email">Email:</label>
+                <span id="contactForm-email-error" class="invalid-feedback text-danger"><small>Email must be a valid email address</small></span>
             </div>
 
             <div class="col-md-4 offset-md-4 mt-5">
-                <button type="submit" class="btn btn-secondary">Sign Up!</button>
+                <button id="contactForm-submit" type="submit" class="btn btn-secondary">Sign Up!</button>
             </div>
-            
         </form>
         </div>
     </div>
