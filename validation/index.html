@@ -41,13 +41,13 @@
             </div>
 
             <div class="col-md-4 offset-md-4 mb-3 form-floating">
-                <input id="contactForm-password" required type="password" onchange='check();' class="form-control needs-validation" placeholder="password">
+                <input id="contactForm-password" required type="password" onchange='validConfirmPassword();' class="form-control needs-validation" placeholder="password">
                 <label for="contactForm-password">Lösenord:</label>
                 <span id="contactForm-password-error" class="invalid-feedback text-danger ms-3 mt-3"><small>Lösenordet måste vara mellan 7 - 15 tecken</small></span>
             </div>
 
             <div class="col-md-4 offset-md-4 mb-3 form-floating">
-                <input id="contactForm-confirmPassword" required type="password" onchange='check();' class="form-control needs-validation" placeholder="confirmPassword">
+                <input id="contactForm-confirmPassword" required type="password" onchange='validConfirmPassword();' class="form-control needs-validation" placeholder="confirmPassword">
                 <label for="contactForm-confirmPassword">Bekräfta lösenord:</label>
                 <span id="contactForm-confirmPassword-error" class="invalid-feedback text-danger ms-3 mt-3"><small>Lösenordet måste matcha</small></span>
             </div>

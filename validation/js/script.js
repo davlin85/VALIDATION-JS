@@ -40,7 +40,7 @@ function validAge() {
     }
   }
 
-   function check() {
+   function validConfirmPassword() {
     if (document.getElementById('contactForm-password').value == document.getElementById('contactForm-confirmPassword').value) {
         document.getElementById("contactForm-confirmPassword-error").style.display =""
 
