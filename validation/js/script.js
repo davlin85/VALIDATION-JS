@@ -5,7 +5,7 @@ function validMinValue(value, minValue = 2) {
     return true
 }
 
-function validZipCode(value, minValue = 5) {
+function validAdress(value, minValue = 5) {
     if(value.length < minValue)
         return false
     
@@ -78,7 +78,6 @@ forms.forEach(element => {
     switch(element.id) {
         case "contactForm-firstName":
         case "contactForm-lastName":
-        case "contactForm-adress":
         case "contactForm-city":
             element.addEventListener('keyup', function (e) {
                 if(!validMinValue(e.target.value)){ 
@@ -94,8 +93,9 @@ forms.forEach(element => {
         break;
 
         case "contactForm-zipCode":
+        case "contactForm-adress":
             element.addEventListener('keyup', function (e) {
-                if(!validZipCode(e.target.value)) {
+                if(!validAdress(e.target.value)) {
                     e.target.classList.add("is-invalid")
                     document.getElementById(`${e.target.id}-error`).style.display = "block"
                 }
