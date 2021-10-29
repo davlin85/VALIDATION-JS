@@ -30,7 +30,7 @@ function validPassword(value) {
     return true
 }
 
-  function validAge(birth) {
+function validAge(birth) {
     var today = new Date();
     var nowyear = today.getFullYear();
     var nowmonth = today.getMonth();
@@ -52,20 +52,20 @@ function validPassword(value) {
         
         return true
     }
-    if ((age == 18 && age_month <= 0 && age_day <= 0) || age < 18) {
+    if ((age == 18 && age_month <= 0 && age_day <= 0) || age < 18){
         return true;
     }
 }
 
-   function validConfirmPassword() {
+function validConfirmPassword() {
     if (document.getElementById('contactForm-password').value == document.getElementById('contactForm-confirmPassword').value) {
         return true
 
     } else {
         return false
-
+        
     }
-  }
+}
 
 function onSubmit(e) {
     e.preventDefault()
@@ -168,7 +168,7 @@ forms.forEach(element => {
 
         case "contactForm-birthDay":
             element.addEventListener('keyup', function (e) {
-                if(validAge(e.target.value)){ 
+                if(validAge(e.target.value)) { 
                     e.target.classList.add("is-invalid")
                     document.getElementById("contactFormbirthDayerror").style.display = "block"
                 }
