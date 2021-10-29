@@ -5,7 +5,7 @@ function validMinValue(value, minValue = 2) {
     return true
 }
 
-function validAdress(value, minValue = 5) {
+function validZipcode(value, minValue = 5) {
     if(value.length < minValue)
         return false
     
@@ -30,15 +30,32 @@ function validPassword(value) {
     return true
 }
 
-function validAge() {
-    var x, text;
-    x = document.getElementById("contactForm-birthDay").value;
-    if (isNaN(x) || x < 10000000 || x > 20031107) {
-      return false
-    } else {
-      return true
+  function validAge(birth) {
+    var today = new Date();
+    var nowyear = today.getFullYear();
+    var nowmonth = today.getMonth();
+    var nowday = today.getDate();
+    var b = document.getElementById('contactForm-birthDay').value;
+
+    var birth = new Date(b);
+
+    var birthyear = birth.getFullYear();
+    var birthmonth = birth.getMonth();
+    var birthday = birth.getDate();
+
+    var age = nowyear - birthyear;
+    var age_month = nowmonth - birthmonth;
+    var age_day = nowday - birthday;
+
+    if (age_month < 0 || (age_month == 0 && age_day < 0)) {
+        age = parseInt(age) - 1;
+        
+        return true
     }
-  }
+    if ((age == 18 && age_month <= 0 && age_day <= 0) || age < 18) {
+        return true;
+    }
+}
 
    function validConfirmPassword() {
     if (document.getElementById('contactForm-password').value == document.getElementById('contactForm-confirmPassword').value) {
@@ -78,6 +95,7 @@ forms.forEach(element => {
     switch(element.id) {
         case "contactForm-firstName":
         case "contactForm-lastName":
+        case "contactForm-adress":
         case "contactForm-city":
             element.addEventListener('keyup', function (e) {
                 if(!validMinValue(e.target.value)){ 
@@ -93,9 +111,8 @@ forms.forEach(element => {
         break;
 
         case "contactForm-zipCode":
-        case "contactForm-adress":
             element.addEventListener('keyup', function (e) {
-                if(!validAdress(e.target.value)) {
+                if(!validZipcode(e.target.value)) {
                     e.target.classList.add("is-invalid")
                     document.getElementById(`${e.target.id}-error`).style.display = "block"
                 }
@@ -148,10 +165,10 @@ forms.forEach(element => {
                 }
             })
         break;
-        
+
         case "contactForm-birthDay":
             element.addEventListener('keyup', function (e) {
-                if(!validAge(e.target.value)){ 
+                if(validAge(e.target.value)){ 
                     e.target.classList.add("is-invalid")
                     document.getElementById("contactFormbirthDayerror").style.display = "block"
                 }

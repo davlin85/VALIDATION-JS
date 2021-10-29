@@ -55,14 +55,14 @@
         </div>
         <div class="col col-lg-4">
             <div class="form-floating mb-4">
-                <input id="contactForm-birthDay" required type="text" class="form-control needs-validation shadow-sm" placeholder="birthDay">
-                <label for="contactForm-birthDay">Födelsedatum (ÅÅÅÅMMDD):</label>
+                <input id="contactForm-birthDay" required type="text" class="form-control needs-validation shadow-sm" onchange='validAge();' placeholder="birthDay">
+                <label for="contactForm-birthDay">Födelsedatum (ÅÅÅÅ-MM-DD):</label>
                 <span id="contactFormbirthDayerror" class="invalid-feedback text-danger ms-3 mt-4"><small>Du måste vara minst 18 år</small></span>
             </div>
             <div class="form-floating mb-4">
                 <input id="contactForm-adress" required type="text" class="form-control needs-validation shadow-sm" placeholder="adress">
                 <label for="contactForm-adress">Adress:</label>
-                <span id="contactForm-adress-error" class="invalid-feedback text-danger ms-3 mt-4"><small>Adressen måste bestå av minst 5 tecken</small></span>
+                <span id="contactForm-adress-error" class="invalid-feedback text-danger ms-3 mt-4"><small>Adressen måste bestå av minst 2 tecken</small></span>
             </div>
             <div class="form-floating mb-4">
                 <input id="contactForm-zipCode" required type="text" class="form-control needs-validation shadow-sm" placeholder="zipCode">
