@@ -42,10 +42,10 @@ function validAge() {
 
    function validConfirmPassword() {
     if (document.getElementById('contactForm-password').value == document.getElementById('contactForm-confirmPassword').value) {
-        document.getElementById("contactForm-confirmPassword-error").style.display =""
+        return true
 
     } else {
-        document.getElementById("contactForm-confirmPassword-error").style.display ="block"
+        return false
 
     }
   }
@@ -124,6 +124,20 @@ forms.forEach(element => {
         case "contactForm-password":
             element.addEventListener('keyup', function (e) {
                 if(!validPassword(e.target.value)){ 
+                    e.target.classList.add("is-invalid")
+                    document.getElementById(`${e.target.id}-error`).style.display = "block"
+                }
+                else { 
+                    e.target.classList.remove("is-invalid")
+                    document.getElementById(`${e.target.id}-error`).style.display = "none"
+                    checkValidForm(forms)
+                }
+            })
+        break;
+
+        case "contactForm-confirmPassword":
+            element.addEventListener('keyup', function (e) {
+                if(!validConfirmPassword(e.target.value)){ 
                     e.target.classList.add("is-invalid")
                     document.getElementById(`${e.target.id}-error`).style.display = "block"
                 }
