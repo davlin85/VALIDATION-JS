@@ -14,7 +14,6 @@ function validZipcode(value, minValue = 5) {
 
 function validEmail(value) {
     const regEx = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-
     if(!regEx.test(value))
         return false
 
@@ -23,7 +22,6 @@ function validEmail(value) {
 
 function validPassword(value) {
     const regEx = /^[A-Za-z]\w{7,14}$/;
-    
     if(!regEx.test(value))
         return false
 
@@ -36,13 +34,10 @@ function validAge(birth) {
     var nowmonth = today.getMonth();
     var nowday = today.getDate();
     var b = document.getElementById('contactForm-birthDay').value;
-
     var birth = new Date(b);
-
     var birthyear = birth.getFullYear();
     var birthmonth = birth.getMonth();
     var birthday = birth.getDate();
-
     var age = nowyear - birthyear;
     var age_month = nowmonth - birthmonth;
     var age_day = nowday - birthday;
@@ -63,7 +58,6 @@ function validConfirmPassword() {
 
     } else {
         return false
-        
     }
 }
 
@@ -73,21 +67,17 @@ function onSubmit(e) {
 
 function checkValidForm(elements) {
     let error = false
-
     elements.forEach(element => {
         if(element.value === "")
             error = true
         })
-
         if(error)
             document.getElementById("contactForm-submit").disabled = true
         else
             document.getElementById("contactForm-submit").disabled = false
-    
 }
 
 var forms = document.querySelectorAll('.needs-validation')
-
 checkValidForm(forms)
 
 
