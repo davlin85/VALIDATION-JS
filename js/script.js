@@ -42,6 +42,8 @@ function validAge(birth) {
     var age_month = nowmonth - birthmonth;
     var age_day = nowday - birthday;
 
+
+
     if (age_month < 0 || (age_month == 0 && age_day < 0)) {
         age = parseInt(age) - 1;
         
