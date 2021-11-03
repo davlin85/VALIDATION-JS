@@ -5,10 +5,11 @@ function validMinValue(value, minValue = 2) {
     return true
 }
 
-function validZipcode(value, minValue = 5) {
-    if(value.length < minValue)
+function validZipcode(value) {
+    const regEx = /^.{5}$/;
+    if(!regEx.test(value))
         return false
-    
+
     return true
 }
 

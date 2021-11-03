@@ -29,28 +29,28 @@
             <form id="myForm" onsubmit="onSubmit(event)" novalidate>
             <div class="form-floating mb-4">
                 <input id="contactForm-firstName" required type="text" class="form-control needs-validation shadow-sm" placeholder="firstName">
-                <label for="contactForm-firstName">Förnamn:</label>
-                <span id="contactForm-firstName-error" class="invalid-feedback text-danger ms-3 mt-4">Förnamnet måste bestå av minst 2 bokstäver</span>
+                <label for="contactForm-firstName">First name:</label>
+                <span id="contactForm-firstName-error" class="invalid-feedback text-danger ms-3 mt-4">First name must consist of at least 2 letters</span>
             </div>
             <div class="form-floating mb-4">
                 <input id="contactForm-lastName" required type="text" class="form-control needs-validation shadow-sm" placeholder="lastName">
-                <label for="contactForm-lastName">Efternamn:</label>
-                <span id="contactForm-lastName-error" class="invalid-feedback text-danger ms-3 mt-4">Efternamnet måste bestå av minst 2 bokstäver</span>
+                <label for="contactForm-lastName">Last name:</label>
+                <span id="contactForm-lastName-error" class="invalid-feedback text-danger ms-3 mt-4">Last name must consist of at least 2 letters</span>
             </div>
             <div class="form-floating mb-4">
                 <input id="contactForm-email" required type="email" class="form-control needs-validation shadow-sm" placeholder="email">
-                <label for="contactForm-email">E-postadress:</label>
-                <span id="contactForm-email-error" class="invalid-feedback text-danger ms-3 mt-4">E-postadressen måste vara giltlig</span>
+                <label for="contactForm-email">E-mail:</label>
+                <span id="contactForm-email-error" class="invalid-feedback text-danger ms-3 mt-4">E-mail must be valid</span>
             </div>
             <div class="form-floating mb-4">
                 <input id="contactForm-password" required type="password" onchange='validConfirmPassword();' class="form-control needs-validation shadow-sm" placeholder="password">
-                <label for="contactForm-password">Lösenord:</label>
-                <span id="contactForm-password-error" class="invalid-feedback text-danger ms-3 mt-4">Lösenordet måste vara mellan 7 - 16 tecken</span>
+                <label for="contactForm-password">Password:</label>
+                <span id="contactForm-password-error" class="invalid-feedback text-danger ms-3 mt-4">Password must be between 7 - 16 characters</span>
             </div>
             <div class="form-floating mb-4">
                 <input id="contactForm-confirmPassword" required type="password" onchange='validConfirmPassword();' class="form-control needs-validation shadow-sm" placeholder="confirmPassword">
-                <label for="contactForm-confirmPassword">Bekräfta lösenord:</label>
-                <span id="contactForm-confirmPassword-error" class="invalid-feedback text-danger ms-3 mt-4">Lösenorden matchar inte</span>
+                <label for="contactForm-confirmPassword">Confirm password:</label>
+                <span id="contactForm-confirmPassword-error" class="invalid-feedback text-danger ms-3 mt-4">Passwords do not match</span>
             </div>
             <div class="mb-5 mt-5">
                 <button id="contactForm-submit" type="submit" class="btn btn-secondary shadow-lg btn-lg">Sign Up!</button>
@@ -59,30 +59,29 @@
         <div class="col col-lg-4">
             <div class="form-floating mb-4">
                 <input id="contactForm-birthDay" required type="text" class="form-control needs-validation shadow-sm" onchange='validAge();' placeholder="birthDay">
-                <label for="contactForm-birthDay">Födelsedatum (ÅÅÅÅ-MM-DD):</label>
-                <span id="contactFormbirthDayerror" class="invalid-feedback text-danger ms-3 mt-4">Du måste vara minst 18 år</span>
+                <label for="contactForm-birthDay">Date of birth (YYYY-MM-DD):</label>
+                <span id="contactFormbirthDayerror" class="invalid-feedback text-danger ms-3 mt-4">You must be at least 18 years old</span>
             </div>
             <div class="form-floating mb-4">
                 <input id="contactForm-adress" required type="text" class="form-control needs-validation shadow-sm" placeholder="adress">
-                <label for="contactForm-adress">Adress:</label>
-                <span id="contactForm-adress-error" class="invalid-feedback text-danger ms-3 mt-4">Adressen måste bestå av minst 2 tecken</span>
+                <label for="contactForm-adress">Address:</label>
+                <span id="contactForm-adress-error" class="invalid-feedback text-danger ms-3 mt-4">Address must consist of at least 2 characters</span>
             </div>
             <div class="form-floating mb-4">
                 <input id="contactForm-zipCode" required type="text" class="form-control needs-validation shadow-sm" placeholder="zipCode">
-                <label for="contactForm-zipCode">Postnummer:</label>
-                <span id="contactForm-zipCode-error" class="invalid-feedback text-danger ms-3 mt-4">Postnumret måste vara 5 siffror</span>
+                <label for="contactForm-zipCode">ZIP code:</label>
+                <span id="contactForm-zipCode-error" class="invalid-feedback text-danger ms-3 mt-4">ZIP code must be 5 digits</span>
             </div>
             <div class="form-floating mb-4">
                 <input id="contactForm-city" required type="text" class="form-control needs-validation shadow-sm" placeholder="city">
-                <label for="contactForm-city">Stad:</label>
-                <span id="contactForm-city-error" class="invalid-feedback text-danger ms-3 mt-4">Staden måste bestå av minst 2 bokstäver</span>
+                <label for="contactForm-city">City:</label>
+                <span id="contactForm-city-error" class="invalid-feedback text-danger ms-3 mt-4">City must consist of at least 2 letters</span>
             </div>
         </div>
         </div>
         </div>
     </form>
     </div>
-</div>
 
 </body>
 
