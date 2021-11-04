@@ -1,5 +1,6 @@
-function validMinValue(value, minValue = 2) {
-    if(value.length < minValue)
+function validMinValue(value) {
+    const regEx = /^.{2,}$/;
+    if(!regEx.test(value))
         return false
 
     return true
@@ -66,6 +67,7 @@ function validConfirmPassword() {
 
 function onSubmit(e) {
     e.preventDefault()
+    this.push.to('http://www.aftonbladet.se');
 }
 
 function checkValidForm(elements) {
