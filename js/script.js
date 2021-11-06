@@ -67,7 +67,6 @@ function validConfirmPassword() {
 
 function onSubmit(e) {
     e.preventDefault()
-    this.push.to('http://www.aftonbladet.se');
 }
 
 function checkValidForm(elements) {
